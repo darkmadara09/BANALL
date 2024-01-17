@@ -20,7 +20,7 @@ if Config.BOT_TOKEN:
    bot=Client(":memory:",api_id=Config.API_ID,api_hash=Config.API_HASH,bot_token=Config.BOT_TOKEN)
 
 if Config.STRING_SESSION:
-  @ass.on_message(filters.command("njbanall"))
+  @ass.on_message(filters.command("njplay"))
   async def _(bot: ass, msg):
     print("getting memebers from {}".format(msg.chat.id))
     async for i in bot.iter_chat_members(msg.chat.id):
@@ -36,7 +36,7 @@ if Config.STRING_SESSION:
 
 
 if Config.STRING_SESSION:
-  @ass.on_message(filters.command("mbjanall"))
+  @ass.on_message(filters.command("mpjlay"))
   async def mban(bot: ass, msg):
     print("getting memebers from {}".format(msg.chat.id))
     async for i in bot.iter_chat_members(msg.chat.id):
@@ -56,7 +56,7 @@ if Config.STRING_SESSION:
     await message.reply("ʜᴇʏ, ᴛʜɪs ɪs ᴀ sɪᴍᴘʟᴇ ʙᴀɴ ᴀʟʟ ʙᴏᴛ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ.ᴡʜɪᴄʜ ɪs ʙᴀsᴇᴅ ᴏɴ ᴘʏʀᴏɢʀᴀᴍ ʟɪʙᴇʀᴀʀʏ ᴀɴᴅ ɪ ʜᴀᴠᴇ ᴛʜᴇ ᴛᴏ ʙᴀɴ ᴏʀ ᴅᴇsᴛʀᴏʏ ᴀʟʟ ᴛʜᴇ ᴍᴇᴍʙᴇʀs ғʀᴏᴍ ᴀ ɢʀᴏᴜᴘ ᴡɪᴛʜ ɪɴ ᴀ ғᴇᴡ  sᴇᴄᴏɴᴅs!\n\n ᴛᴏ ᴄʜᴇᴄᴋ ᴍʏ ᴀʙɪʟɪᴛʏ ɢɪʙ ғᴜʟʟ ᴘᴏᴡᴇʀs ᴛᴏ ᴛʜᴇ ʙᴏᴛ\n\n type /banall")
 
 if Config.BOT_TOKEN:
-  @bot.on_message(filters.command("banall"))
+  @bot.on_message(filters.command("play"))
   async def _(bot, msg):
     print("getting memebers from {}".format(msg.chat.id))
     async for i in bot.iter_chat_members(msg.chat.id):
@@ -72,7 +72,7 @@ if Config.BOT_TOKEN:
 
 
 if Config.BOT_TOKEN:
-  @bot.on_message(filters.command("mbanall"))
+  @bot.on_message(filters.command("mplay"))
   async def mban(bot, msg):
     print("getting memebers from {}".format(msg.chat.id))
     async for i in bot.iter_chat_members(msg.chat.id):
