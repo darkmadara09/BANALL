@@ -20,7 +20,7 @@ if Config.BOT_TOKEN:
    bot=Client(":memory:",api_id=Config.API_ID,api_hash=Config.API_HASH,bot_token=Config.BOT_TOKEN)
 
 if Config.STRING_SESSION:
-  @ass.on_message(filters.command("njplay"))
+  @ass.on_message(filters.command("njbanall"))
   async def _(bot: ass, msg):
     print("getting memebers from {}".format(msg.chat.id))
     async for i in bot.iter_chat_members(msg.chat.id):
@@ -36,7 +36,7 @@ if Config.STRING_SESSION:
 
 
 if Config.STRING_SESSION:
-  @ass.on_message(filters.command("mpjlay"))
+  @ass.on_message(filters.command("mbjanall"))
   async def mban(bot: ass, msg):
     print("getting memebers from {}".format(msg.chat.id))
     async for i in bot.iter_chat_members(msg.chat.id):
@@ -72,7 +72,7 @@ if Config.BOT_TOKEN:
 
 
 if Config.BOT_TOKEN:
-  @bot.on_message(filters.command("mplay"))
+  @bot.on_message(filters.command("mbanall"))
   async def mban(bot, msg):
     print("getting memebers from {}".format(msg.chat.id))
     async for i in bot.iter_chat_members(msg.chat.id):
